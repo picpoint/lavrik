@@ -11,6 +11,12 @@ session_start();
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<?php
+  require_once "../model/getArticlesModel.php";
+  
+  $res = new GetArticlesModel();
+  print_r($res -> getAllArticles());
+?>
   <h3>Home page</h3>
 </body> 
 </html>
