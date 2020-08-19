@@ -12,7 +12,17 @@ class ShowArticlesController {
 
 
   function showArticles() {
-    return $this->dtArt;
+    // return $this->dtArt;
+    foreach($this->dtArt as $key => $value) {
+      // echo("$key - $value");
+      // print_r($value);
+      // echo("<br>");
+      // echo("<br>");
+      // echo("<br>");
+      echo("<div class="."wrp__link".">");
+        echo("<a href=". "#" . ">$value[id]</a>");
+      echo("</div>");
+    }
   }
 
 

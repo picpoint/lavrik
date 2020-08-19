@@ -11,16 +11,17 @@ session_start();
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<?php
-  // require_once "../model/getArticlesModel.php";  
-  // $res = new GetArticlesModel();
-  // print_r($res -> getAllArticles());
 
-  require_once "../controller/showArticlesController.php";
-  $res = new ShowArticlesController();
-  print_r($res->showArticles());
+  <section class="wrp">
+    <?php
+      require_once "../controller/showArticlesController.php";
+      $res = new ShowArticlesController();
+      print_r($res->showArticles());
+    ?>
+  </section>
 
-?>
-  <h3>Home page</h3>
+  
+    
+
 </body> 
 </html>

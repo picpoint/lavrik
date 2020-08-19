@@ -12,4 +12,23 @@
   box-sizing: border-box;  
 }
 
+.wrp {
+  border: @border;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+    &__link {
+      border: @border;
+      display: flex;                  
+      height: 20px;     
+      background-color: lightgray; 
+      margin-top: 100px;
+        a {
+          width: 7px;
+          height: 7px;
+          margin: 0 7px;          
+        }      
+    }
+}
+
 
