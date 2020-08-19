@@ -11,13 +11,24 @@ session_start();
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<?php
+  require_once "../controller/showArticlesController.php";
+?>
 
   <section class="wrp">
-    <?php
-      require_once "../controller/showArticlesController.php";
-      $res = new ShowArticlesController();
-      $res->showArticles();
-    ?>
+    <div class="wrp__contentblock">
+      <?php      
+        $res = new ShowArticlesController();
+        $res->showArticles();
+      ?>
+    </div>
+    <div class="wrp__links">
+      <?php
+        $res = new ShowArticlesController();
+        $res->showNumbersArticles();
+      ?>
+    </div>
+    
   </section>
 
   

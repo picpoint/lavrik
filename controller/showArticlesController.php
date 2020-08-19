@@ -11,21 +11,23 @@ class ShowArticlesController {
   }  
 
 
-  function showArticles() {    
+  public function showArticles() {    
     foreach($this->dtArt as $key => $value) {      
-      if($_GET['id'] == $value['id']) {
-        echo("<div class="."wrp__contentblock".">");
-          echo("<span><b>$value[title]</b></span>");
-          echo("<span>$value[content]</span>");
-        echo("</div>");
-      }
-
-      echo("<a href=". "?id=$value[id]" . ">$value[id]</a>");
-      
-      
-      
+      if($_GET['id'] == $value['id']) {        
+        echo("<span><b>$value[title]</b></span>");
+        echo("<span>$value[content]</span>");        
+      }      
     }
   }
+
+
+  public function showNumbersArticles() {
+    foreach($this->dtArt as $key => $value) {            
+      echo("<a href=". "?id=$value[id]" . ">$value[id]</a>");
+    }
+  }
+
+
 
 
 }
