@@ -12,10 +12,14 @@ session_start();
 </head>
 <body>
 <?php
-  require_once "../model/getArticlesModel.php";
-  
-  $res = new GetArticlesModel();
-  print_r($res -> getAllArticles());
+  // require_once "../model/getArticlesModel.php";  
+  // $res = new GetArticlesModel();
+  // print_r($res -> getAllArticles());
+
+  require_once "../controller/showArticlesController.php";
+  $res = new ShowArticlesController();
+  print_r($res->showArticles());
+
 ?>
   <h3>Home page</h3>
 </body> 
