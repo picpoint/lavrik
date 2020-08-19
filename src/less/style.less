@@ -15,12 +15,26 @@
 .wrp {
   border: @border;
   display: flex;
-  justify-content: center;
+  flex-direction: column;  
   height: 100vh;
+  background-color: lightblue;
+    &__contentblock {
+      border: @border;
+      display: flex;      
+      align-content: center;
+      align-items: center;
+      width: 100%;
+      height: 80%;
+      background-color: lightcyan;
+        span {
+          border: @border;
+        }
+    }
     &__link {
       border: @border;
-      display: flex;                  
-      height: 20px;     
+      display: flex;
+      flex-direction: row;
+      height: 20%;
       background-color: lightgray; 
       margin-top: 100px;
         a {
@@ -29,6 +43,9 @@
           margin: 0 7px;          
         }      
     }
+
+
+
 }
 
 

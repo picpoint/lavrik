@@ -16,7 +16,7 @@ session_start();
     <?php
       require_once "../controller/showArticlesController.php";
       $res = new ShowArticlesController();
-      print_r($res->showArticles());
+      $res->showArticles();
     ?>
   </section>
 
