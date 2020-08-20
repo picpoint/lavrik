@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 include_once "../model/getArticlesModel.php";
 
 
@@ -16,8 +16,9 @@ class ShowArticlesController {
       if($_GET['id'] == $value['id']) {        
         echo("<span><b>$value[title]</b></span>");
         echo("<span>$value[content]</span>");        
-      }      
+      }
     }
+
   }
 
 
