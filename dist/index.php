@@ -11,6 +11,11 @@ session_start();
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<?php
+  require_once "../controller/showArticlesController.php";
+  $showArticles = new ShowArticles();
+  $showArticles -> showArticles();
+?>
 
 
   <section class="wrp">
