@@ -12,14 +12,23 @@ session_start();
 </head>
 <body>
 <?php
-  require_once "../controller/showArticlesController.php";
-  $showArticles = new ShowArticles();
-  $showArticles -> showArticles();
+  require_once "../controller/showArticlesController.php";  
 ?>
 
 
   <section class="wrp">
-    <h3>Home page</h3>
+    <div class="wrp__article">
+      <?php
+        $showArticles = new ShowArticles();
+        $showArticles -> showArticles();
+      ?>
+    </div>
+    <div class="wrp__paginator">
+      <?php
+        $paginator = new showArticles();
+        $paginator -> showPagination();
+      ?>
+    </div>
   </section>  
     
 

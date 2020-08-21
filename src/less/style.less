@@ -15,7 +15,52 @@
 .wrp {
   border: @border;
   display: flex;  
+  flex-direction: column;
   height: 100vh;
+  &__article {
+    border: @border;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+  }
+  &__title {
+    border: @border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;    
+    margin-bottom: 50px;
+    height: 10%;
+  }
+  &__content {
+    border: @border;    
+    height: 80%;
+    width: 75%;
+    text-align: center;
+  }
+  &__paginator {
+    border: @border;
+    display: flex;
+    justify-content: center;
+    height: 20%;
+      a {
+        border: @border;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 0 5px;
+        height: 15px;
+        width: 15px;
+        background-color: lightgray;
+      }
+  }
+
+
+
 }
 
 
