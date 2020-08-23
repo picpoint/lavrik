@@ -13,10 +13,15 @@ session_start();
 <body>
 <?php
   require_once "../controller/showArticlesController.php";  
+  require_once "../controller/getArticleController.php";
 ?>
 
 
   <section class="wrp">
+    <?php
+      // $removeArticle = new GetArticleID();
+      // $removeArticle -> getOneArticle();
+    ?>
     <div class="wrp__article">
       <?php
         $showArticles = new ShowArticles();

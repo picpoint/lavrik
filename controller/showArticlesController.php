@@ -23,7 +23,7 @@ class ShowArticles {                                                            
             echo($arr['content']);
           echo("</div>");
           echo("<div class="."wrp__operations".">");
-            echo("<a href="."?id=$value".">remove</a>");
+            echo("<a href="."../controller/getArticleController.php".">remove</a>");
             echo("<a href="."add.php".">add</a>");
           echo("</div>");
         }
