@@ -1,5 +1,6 @@
 @import "smart-grid.less";
 @import "var.less";
+@import "add.less";
 
 
 .reset();
@@ -13,41 +14,53 @@
 }
 
 .wrp {
-  border: @border;
+  // border: @border;
   display: flex;  
   flex-direction: column;
   height: 100vh;
   &__article {
-    border: @border;
+    // border: @border;
     display: flex;
     flex-direction: column;    
     justify-content: center;
     align-items: center;
-    height: 80%;
+    height: 95%;
     width: 100%;
   }
   &__title {
-    border: @border;
+    // border: @border;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bolder;    
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     height: 10%;
   }
   &__content {
-    border: @border;    
-    height: 80%;
-    width: 75%;
+    // border: @border;    
+    height: 85%;
+    width: 85%;
     text-align: center;
   }
+  &__operations {
+    // border: @border;
+    display: flex;
+    align-items: center;
+    height: 5%;
+    width: 85%;
+      a {
+        margin: 0 20px;
+      }
+  }
   &__paginator {
-    border: @border;
+    // border: @border;
     display: flex;
     justify-content: center;
-    height: 20%;
+    align-items: center;
+    height: 5%;
+    margin-bottom: 35px;
       a {
-        border: @border;
+        // border: @border;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -57,7 +70,7 @@
         width: 15px;
         background-color: lightgray;
       }
-  }
+  }  
 
 
 
