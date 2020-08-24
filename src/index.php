@@ -1,5 +1,6 @@
 <?php
 session_start();
+setcookie('GET', $_GET["id"] ?? '0', time() + 86400);
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +18,7 @@ session_start();
 ?>
 
 
-  <section class="wrp">
-    <?php
-      // $removeArticle = new GetArticleID();
-      // $removeArticle -> getOneArticle();
-    ?>
+  <section class="wrp">    
     <div class="wrp__article">
       <?php
         $showArticles = new ShowArticles();

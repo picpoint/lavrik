@@ -1,5 +1,6 @@
 <?
 session_start();
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,15 +12,12 @@ session_start();
 <body>
   
   <?php
-
     require_once "../controller/getArticleController.php";
     require_once "../controller/showArticlesController.php";
-    // print_r($_GET["id"]);
-    // die();
     
-    $removeArticles = new GetArticleID();
-    $removeArticles -> getOneArticle();
-  
+    $id = $_COOKIE['GET'];    
+    $removeArticles = new GetArticleID($id);
+    $removeArticles -> getOneArticle();  
   ?>
 
 

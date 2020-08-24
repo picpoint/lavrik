@@ -15,8 +15,7 @@ class ShowArticles {                                                            
   public function showArticles() {                                                // метод показа статей на странице
     foreach($this->arr as $arr) {                                                 // перебираем массив массивов
       foreach($arr as $key => $value) {                                           // перебираем массив 
-        if($_GET["id"] == $value) {                                               // если $_GET['id'] соответствует значению из списка статей          
-          echo("GET - " . $_GET["id"]);
+        if($_GET["id"] == $value) {                                               // если $_GET['id'] соответствует значению из списка статей
           echo("<div class="."wrp__title".">");                                   // в блоках выводим заголовок и содержимое статьи
             echo($arr['title']);
           echo("</div>");
@@ -42,8 +41,7 @@ class ShowArticles {                                                            
           echo("<a href="."?id=$value".">$value</a>");                             // вывести ссылку с адресом статьи и номером как ссылки          
         }
       }
-    }
-    echo("GET - " . $_GET["id"]);
+    }    
 
   }
 
