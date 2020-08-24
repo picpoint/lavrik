@@ -15,7 +15,8 @@ class ShowArticles {                                                            
   public function showArticles() {                                                // метод показа статей на странице
     foreach($this->arr as $arr) {                                                 // перебираем массив массивов
       foreach($arr as $key => $value) {                                           // перебираем массив 
-        if($_GET['id'] == $value) {                                               // если $_GET['id'] соответствует значению из списка статей
+        if($_GET["id"] == $value) {                                               // если $_GET['id'] соответствует значению из списка статей          
+          echo("GET - " . $_GET["id"]);
           echo("<div class="."wrp__title".">");                                   // в блоках выводим заголовок и содержимое статьи
             echo($arr['title']);
           echo("</div>");
@@ -23,7 +24,7 @@ class ShowArticles {                                                            
             echo($arr['content']);
           echo("</div>");
           echo("<div class="."wrp__operations".">");
-            echo("<a href="."../controller/getArticleController.php".">remove</a>");
+            echo("<a href="."../dist/remove.php".">remove</a>");
             echo("<a href="."add.php".">add</a>");
           echo("</div>");
         }
@@ -38,10 +39,11 @@ class ShowArticles {                                                            
     foreach($this->arr as $mass) {                                                 // перебираем массив массивов
       foreach($mass as $key => $value) {                                           // перебираем получившийся массив
         if($key == 'id') {                                                         // если ключ == id 
-          echo("<a href="."?id=$value".">$value</a>");                             // вывести ссылку с адресом статьи и номером как ссылки
+          echo("<a href="."?id=$value".">$value</a>");                             // вывести ссылку с адресом статьи и номером как ссылки          
         }
       }
     }
+    echo("GET - " . $_GET["id"]);
 
   }
 
