@@ -25,6 +25,7 @@ class ShowArticles {                                                            
           echo("<div class="."wrp__operations".">");
             echo("<a href="."../dist/remove.php".">remove</a>");
             echo("<a href="."add.php".">add</a>");
+            echo("<a href="."edit.php".">edit</a>");
           echo("</div>");
         }
 
