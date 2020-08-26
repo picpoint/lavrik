@@ -24,7 +24,9 @@ session_start();
       <input type="text" name="title">
       <textarea name="content" id="cont">
         <?php
-          
+          $res = new GetCoockieID();
+          $content = $res -> getHeaderArticle();
+          echo($content);
         ?>
       </textarea>      
       <button type="submit" name="btnsend">РЕДАКТИРОВАТЬ</button>      

@@ -4,9 +4,9 @@ require_once "../model/editArticleModel.php";
 
 
 
-class GetCoockieID {
-
-  
+class GetCoockieID {  
+  public $mass;
+  public $res;
   
   public function getCookie() {
     return $_COOKIE['GET'];
@@ -15,12 +15,19 @@ class GetCoockieID {
 
   public function insertArticlesToFields() {
     $arr = new EditArticle();
-    $mass = $arr -> getArticleFromDB();
-
-    print_r($mass);
-
-
+    $this->mass = $arr -> getArticleFromDB();
+    return $this->mass;
   }
+
+  
+  public function getHeaderArticle() {
+    $this->res = $this->insertArticlesToFields();
+    return $this->res[0]['content'];
+  }
+
+
+
+
 
 
 }
