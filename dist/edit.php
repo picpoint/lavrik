@@ -1,5 +1,6 @@
 <?
 session_start();
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,8 +23,8 @@ session_start();
     <form method="post" class="edit__formpost">      
       <h3>Редактировать</h3>
       <?php
-        $coockie = new GetCoockieID();
-        echo($coockie -> getCookie());
+        $editArticle = new GetCoockieID();
+        $editArticle -> editArticle();
       ?>
       <input type="text" name="titleedit" value="<?php $hdr = new GetCoockieID();$hdrRes = $hdr -> getHeaderArticle();echo($hdrRes); ?>">
       <textarea name="contentedit" id="cont"><?php $cntnt = new GetCoockieID(); $cntntRes = $cntnt -> getContentArticle(); echo($cntntRes); ?></textarea>      
@@ -31,9 +32,7 @@ session_start();
 
       <?php
         $res = new GetCoockieID();
-        $res -> insertArticlesToFields();        
-        // $res = new EditArticle();
-        // $res -> getArticleFromDB();
+        $res -> insertArticlesToFields();                
       ?>
     </form>      
 

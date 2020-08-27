@@ -21,7 +21,12 @@ class EditArticle {
   }
 
   public function writeEditArticle() {
+    // $datas = new GetCoockieID();
+    // $datasToWrite = $datas -> editArticle();
+    // print_r($datasToWrite);
     
+    $sth = $this->cnnct -> prepare(" UPDATE articles SET title='$datasToWrite[1]', content='$datasToWrite[2]' WHERE id='$datasToWrite[0]' ");
+    $sth -> execute();
   }
   
 
