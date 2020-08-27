@@ -18,7 +18,10 @@ class EditArticle {
     $sth -> execute();
     $res = $sth -> fetchAll(PDO::FETCH_ASSOC);
     return $res;
+  }
 
+  public function writeEditArticle() {
+    
   }
   
 
