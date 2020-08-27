@@ -21,14 +21,8 @@ session_start();
     
     <form method="post" class="edit__formpost">      
       <h3>Редактировать</h3>
-      <input type="text" name="title">
-      <textarea name="content" id="cont">
-        <?php
-          $res = new GetCoockieID();
-          $content = $res -> getHeaderArticle();
-          echo($content);
-        ?>
-      </textarea>      
+      <input type="text" name="title" value="<?php $hdr = new GetCoockieID();$hdrRes = $hdr -> getHeaderArticle();echo($hdrRes); ?>">
+      <textarea name="content" id="cont"><?php $cntnt = new GetCoockieID(); $cntntRes = $cntnt -> getContentArticle(); echo($cntntRes); ?></textarea>      
       <button type="submit" name="btnsend">РЕДАКТИРОВАТЬ</button>      
       <?php
         $res = new GetCoockieID();

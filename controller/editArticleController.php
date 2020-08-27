@@ -19,11 +19,19 @@ class GetCoockieID {
     return $this->mass;
   }
 
-  
+
   public function getHeaderArticle() {
+    $this->res = $this->insertArticlesToFields();
+    return $this->res[0]['title'];
+  }
+
+  
+  public function getContentArticle() {
     $this->res = $this->insertArticlesToFields();
     return $this->res[0]['content'];
   }
+
+  
 
 
 
