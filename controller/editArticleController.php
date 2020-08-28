@@ -42,9 +42,9 @@ class GetCoockieID {
         $massToEdit[] = $this->coockie;
         $massToEdit[] = $_POST['titleedit'];
         $massToEdit[] = $_POST['contentedit'];
-        //return $massToEdit;
-        $result = new EditArticle($this->massToEdit);
-        $result -> writeEditArticle();
+        return $massToEdit;
+        // $result = new EditArticle($massToEdit);
+        // $result -> writeEditArticle();
       }
     }
 
