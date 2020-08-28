@@ -4,9 +4,11 @@ require_once "../controller/editArticleController.php";
 
 
 class EditArticle {
+  // public $massToEdit;
   
-  public function __construct() {
+  public function __construct($massToEdit) {
     $this->cnnct = new PDO('mysql:host=localhost;dbname=lavrik', 'rmtar', '2203');
+    $this->massToEdit = $massToEdit;
   }
 
 
@@ -20,13 +22,11 @@ class EditArticle {
     return $res;
   }
 
-  public function writeEditArticle() {
-    // $datas = new GetCoockieID();
-    // $datasToWrite = $datas -> editArticle();
-    // print_r($datasToWrite);
-    
-    $sth = $this->cnnct -> prepare(" UPDATE articles SET title='$datasToWrite[1]', content='$datasToWrite[2]' WHERE id='$datasToWrite[0]' ");
-    $sth -> execute();
+  public function writeEditArticle() {    
+    echo('*****************Method is ok********************');
+    // $sth = $this->cnnct -> prepare(" UPDATE articles SET title='$this->massToEdit[1]', content='$this->massToEdit[2]' WHERE id='$this->massToEdit[0]' ");
+    // $sth -> execute();
+    // return $this->massToEdit;
   }
   
 

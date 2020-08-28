@@ -1,5 +1,6 @@
 <?php
 
+require_once "../controller/editArticleController.php";
 
 
 class RemoveArticle {
