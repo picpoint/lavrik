@@ -19,9 +19,7 @@ error_reporting(0);
   require_once "../model/editArticleModel.php";
 ?>
 
-<?php
-  // $editArticle = new GetCoockieID();
-  // $editArticle -> editArticle();
+<?php  
   $res = new EditArticle();
   $res -> writeEditArticle();
 ?>

@@ -15,6 +15,7 @@ setcookie('GET', $_GET["id"] ?? '0', time() + 86400);
 <?php
   require_once "../controller/showArticlesController.php";  
   require_once "../controller/getArticleController.php";
+  require_once "../model/getCurrentDate.php";
 ?>
 
 
@@ -29,8 +30,20 @@ setcookie('GET', $_GET["id"] ?? '0', time() + 86400);
       <?php
         $paginator = new showArticles();
         $paginator -> showPagination();
-      ?>
+      ?>      
     </div>
+    
+    <?php
+      $dt = new GetVariousParameters();
+      echo($dt -> getCurrentDate());
+      echo("<br>");
+      echo($dt -> getCurrentIP());
+      echo("<br>");
+      echo($dt -> getCurrentURI());
+      echo("<br>");
+      echo($dt -> getRefererURI());
+    ?>
+
   </section>  
     
 
