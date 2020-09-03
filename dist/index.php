@@ -15,7 +15,8 @@ setcookie('GET', $_GET["id"] ?? '0', time() + 86400);
 <?php
   require_once "../controller/showArticlesController.php";  
   require_once "../controller/getArticleController.php";
-  require_once "../model/getCurrentDate.php";
+  require_once "../model/getParametres.php";
+  require_once "../controller/createLog.php";
 ?>
 
 
@@ -24,6 +25,9 @@ setcookie('GET', $_GET["id"] ?? '0', time() + 86400);
       <?php
         $showArticles = new ShowArticles();
         $showArticles -> showArticles();
+        
+        $pt = new CreateLog();
+        echo($pt -> createLogs());
       ?>
     </div>
     <div class="wrp__paginator">
@@ -41,7 +45,7 @@ setcookie('GET', $_GET["id"] ?? '0', time() + 86400);
       echo("<br>");
       echo($dt -> getCurrentURI());
       echo("<br>");
-      echo($dt -> getRefererURI());
+      echo($dt -> getRefererURI());     
     ?>
 
   </section>  
