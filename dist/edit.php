@@ -17,9 +17,14 @@ error_reporting(0);
 <?php
   require_once "../controller/editArticleController.php";
   require_once "../model/editArticleModel.php";
+  require_once "../model/getParametres.php";
+  require_once "../controller/createLog.php";
 ?>
 
-<?php  
+<?php
+  $pt = new CreateLog();
+  $pt -> createLogs();
+
   $res = new EditArticle();
   $res -> writeEditArticle();
 ?>

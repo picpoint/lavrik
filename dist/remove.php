@@ -14,6 +14,11 @@ error_reporting(0);
   <?php
     require_once "../controller/getArticleController.php";
     require_once "../controller/showArticlesController.php";
+    require_once "../model/getParametres.php";
+    require_once "../controller/createLog.php";
+
+    $pt = new CreateLog();
+    $pt -> createLogs();
     
     $id = $_COOKIE['GET'];    
     $removeArticles = new GetArticleID($id);

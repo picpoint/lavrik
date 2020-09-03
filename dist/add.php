@@ -14,6 +14,13 @@ session_start();
 <?php
   require_once "../controller/addArticleController.php";
   require_once "../model/writeArticleDBModel.php";  
+  require_once "../model/getParametres.php";
+  require_once "../controller/createLog.php";
+?>
+
+<?php
+  $pt = new CreateLog();
+  $pt -> createLogs();
 ?>
 
 <section class="add">

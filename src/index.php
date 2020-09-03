@@ -36,19 +36,6 @@ setcookie('GET', $_GET["id"] ?? '0', time() + 86400);
         $paginator -> showPagination();
       ?>      
     </div>
-    
-    <?php
-      // $dt = new GetVariousParameters();
-      // echo($dt -> getCurrentDate());
-      // echo("<br>");
-      // echo($dt->getToday());
-      // echo("<br>");
-      // echo($dt -> getCurrentIP());
-      // echo("<br>");
-      // echo($dt -> getCurrentURI());
-      // echo("<br>");
-      // echo($dt -> getRefererURI());     
-    ?>
 
   </section>  
     

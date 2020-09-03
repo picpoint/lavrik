@@ -26,7 +26,6 @@ class CreateLog {
       fwrite($fp, $currentRefURI . PHP_EOL);
       fclose($fp);
     } else {
-      echo($elem);
       $fp = fopen($this->path.'/'.$elem, 'a+');      
       fclose($fp);
     }

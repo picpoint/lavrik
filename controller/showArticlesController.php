@@ -23,9 +23,10 @@ class ShowArticles {                                                            
             echo($arr['content']);
           echo("</div>");
           echo("<div class="."wrp__operations".">");
-            echo("<a href="."../dist/remove.php".">remove</a>");
-            echo("<a href="."add.php".">add</a>");
-            echo("<a href="."edit.php".">edit</a>");
+            echo("<a href="."../dist/remove.php".">Remove</a>");
+            echo("<a href="."add.php".">Add</a>");
+            echo("<a href="."edit.php".">Edit</a>");
+            echo("<a href="."logs.php".">Logs</a>");
           echo("</div>");
         }
 
