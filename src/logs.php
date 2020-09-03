@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+  <section class="logs">
+    <div class="logs__wrp">
+      <h3>Logs page</h3>
+    </div>
+  </section>
 </body>
 </html>

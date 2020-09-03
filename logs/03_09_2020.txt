@@ -23,3 +23,6 @@
 03:09:2020 21:56:27   ::1   localhost/lavrik/dist/   
 03:09:2020 21:56:27   ::1   localhost/lavrik/dist/   
 03:09:2020 21:59:18   ::1   localhost/lavrik/dist/?id=3   http://localhost/lavrik/dist/
+03:09:2020 22:16:16   ::1   localhost/lavrik/dist/   
+03:09:2020 22:16:16   ::1   localhost/lavrik/dist/   
+03:09:2020 22:16:19   ::1   localhost/lavrik/dist/?id=8   http://localhost/lavrik/dist/
