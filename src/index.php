@@ -27,7 +27,7 @@ setcookie('GET', $_GET["id"] ?? '0', time() + 86400);
         $showArticles -> showArticles();
         
         $pt = new CreateLog();
-        echo($pt -> createLogs());
+        $pt -> createLogs();
       ?>
     </div>
     <div class="wrp__paginator">
@@ -38,14 +38,16 @@ setcookie('GET', $_GET["id"] ?? '0', time() + 86400);
     </div>
     
     <?php
-      $dt = new GetVariousParameters();
-      echo($dt -> getCurrentDate());
-      echo("<br>");
-      echo($dt -> getCurrentIP());
-      echo("<br>");
-      echo($dt -> getCurrentURI());
-      echo("<br>");
-      echo($dt -> getRefererURI());     
+      // $dt = new GetVariousParameters();
+      // echo($dt -> getCurrentDate());
+      // echo("<br>");
+      // echo($dt->getToday());
+      // echo("<br>");
+      // echo($dt -> getCurrentIP());
+      // echo("<br>");
+      // echo($dt -> getCurrentURI());
+      // echo("<br>");
+      // echo($dt -> getRefererURI());     
     ?>
 
   </section>  

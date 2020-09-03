@@ -11,6 +11,11 @@ class GetVariousParameters {
   }
 
 
+  public function getToday() {
+    return date('d_m_Y');
+  }
+
+
   public function getCurrentIP() {
     return $_SERVER['REMOTE_ADDR'];
   }
