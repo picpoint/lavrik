@@ -10,9 +10,27 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<?php
+  require_once "../model/getParametres.php";
+  require_once "../controller/createLog.php";
+  require_once "../controller/readFolderLogs.php";
+?>
+
+<?php
+  $pt = new CreateLog();
+  $pt -> createLogs();
+?>
+
+
   <section class="logs">
-    <div class="logs__wrp">
-      <h3>Logs page</h3>
+    <div class="logs__hdr">
+      <h3>Логи системы</h3>
+    </div>
+    <div class="logs__logpage">
+      <?php
+        $readContent = new ReadFolder();
+        $readContent -> readFolderContent();
+      ?>
     </div>
   </section>
 </body>
