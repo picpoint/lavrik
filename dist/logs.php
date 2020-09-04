@@ -21,7 +21,6 @@
   $pt -> createLogs();
 ?>
 
-
   <section class="logs">
     <div class="logs__hdr">
       <h3>Логи системы</h3>
@@ -33,5 +32,6 @@
       ?>
     </div>
   </section>
+  
 </body>
 </html>

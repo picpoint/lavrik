@@ -12,7 +12,9 @@ class ReadFolder {
 
     foreach($allfiles as $file) {      
       if($file != '.' && $file != '..') {                
-        echo("<a href="."__FILE__/../../logs/$file".">$file</a>");
+        // echo("<a href="."__FILE__/../../logs/$file".">$file</a>");
+        echo("<a href="."../dist/dayLog.php".">$file</a>");
+        echo($file);
       }
     }
   }
