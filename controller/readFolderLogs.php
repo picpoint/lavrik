@@ -11,9 +11,8 @@ class ReadFolder {
     $allfiles = scandir($this->path);
 
     foreach($allfiles as $file) {      
-      if($file != '.' && $file != '..') {        
-        echo("<a href="."http://localhost/www/lavrik/logs/$file".">$file</a>");        
-        echo(dirname(__FILE__));
+      if($file != '.' && $file != '..') {                
+        echo("<a href="."__FILE__/../../logs/$file".">$file</a>");
       }
     }
   }
