@@ -12,9 +12,14 @@ class ReadFolder {
 
     foreach($allfiles as $file) {      
       if($file != '.' && $file != '..') {
-        echo($file);
-        echo("<br>");
-        echo("<a href=" . "$path/$file" . " >$file</a>");
+        // echo($file);
+        // echo("<br>");
+        echo("<a href="."http://localhost/www/lavrik/logs/$file".">$file</a>");
+        // echo("<a href="."$this->path/$file".">$file</a>");
+        // echo("<br>");
+        // echo($this->path.'/'.$file);
+        // echo("<br>");
+        // print_r($allfiles);
       }
     }
   }
