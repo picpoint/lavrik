@@ -132,3 +132,5 @@
 04:09:2020 10:45:28   ::1   localhost/www/lavrik/dist/logs.php   http://localhost/www/lavrik/dist/?id=1
 04:09:2020 10:45:33   ::1   localhost/www/lavrik/dist/logs.php   http://localhost/www/lavrik/dist/?id=1
 04:09:2020 10:45:39   ::1   localhost/www/lavrik/dist/logs.php   http://localhost/www/lavrik/dist/?id=1
+04:09:2020 10:53:59   ::1   localhost/www/lavrik/dist/logs.php   http://localhost/www/lavrik/dist/?id=1
+04:09:2020 10:55:08   ::1   localhost/www/lavrik/dist/logs.php   http://localhost/www/lavrik/dist/?id=1
