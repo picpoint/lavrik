@@ -32,6 +32,7 @@
       ?>
     </div>
   </section>
-  
+
+<script src="js/getAlllogs.js"></script>
 </body>
 </html>
