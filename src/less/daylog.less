@@ -21,14 +21,19 @@
     &__logs {
       // border: @border;
       display: flex;      
-      height: 90%;      
-        tr {
-          border: 2px solid black;
-          font-weight: bolder;
-          background-color: lightgrey;
+      flex-direction: column;
+      height: 90%;
+        table {
+          tr {
+            border: 2px solid black;
+            font-weight: bolder;
+            background-color: lightgrey;
+              th {
+                background-color: lightgrey;
+              }
+          }
+          
         }
-        th {
-          background-color: lightgrey;
-        }
+        
     }
 }

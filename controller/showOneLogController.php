@@ -16,16 +16,18 @@ class ShowOneLog {
 
     foreach($files as $file) {
       if($file == $this->readCoockie()) {
-        $content = fopen("http://localhost/lavrik/logs/".$file, "r");
+        $content = fopen("http://localhost/www/lavrik/logs/".$file, "r");
 
         echo("
-              <tr>
-                <th>Дата</th>
-                <th>Время</th>
-                <th>IP</th>
-                <th>Адрес страницы</th>
-                <th>Реферальный адрес</th>
-              </tr>
+              <table>
+                <tr>
+                  <th>Дата</th>
+                  <th>Время</th>
+                  <th>IP</th>
+                  <th>Адрес страницы</th>
+                  <th>Реферальный адрес</th>
+                </tr>
+              </table>
             ");
 
         echo("<br>");
@@ -34,6 +36,7 @@ class ShowOneLog {
           $line = fgets($content);          
           $datas = explode(' ', $line);
           echo("
+              <table>
                 <tr>
                   <td>".$datas[0]."</td>
                   <td>".$datas[1]."</td>
@@ -41,6 +44,7 @@ class ShowOneLog {
                   <td>".$datas[7]."</td>
                   <td>".$datas[10]."</td>
                 </tr>
+              </table>
           ");
           echo("<br>");
         }
