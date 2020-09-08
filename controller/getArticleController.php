@@ -4,17 +4,17 @@ require_once "../model/removeArticleModel.php";
 
 
 
-class GetArticleID {  
+class GetArticleID {                                        // класс получения ID статьи
 
-  public function __construct($id) {
+  public function __construct($id) {                        // передаётся текущий ID
     $this->id = $id;
   }
   
   
-  public function getOneArticle() {    
-    $deleteArticles = new RemoveArticle($this->id);
-    $deleteArticles -> removeArticle();
-    header('location: ../dist/index.php');
+  public function getOneArticle() {                         // метод получения и удаления текущей статьи
+    $deleteArticles = new RemoveArticle($this->id);         // вызываем класс удаления статьи
+    $deleteArticles -> removeArticle();                     // вызываем метод удаления, удаляем нужную статью
+    header('location: ../dist/index.php');                  // переадресовываем на главную
   }
 
 
