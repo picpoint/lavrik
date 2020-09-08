@@ -28,10 +28,7 @@ class ShowOneLog {
                   <th>Реферальный адрес</th>
                 </tr>
               </table>
-            ");
-
-        echo("<br>");
-        
+            ");        
         while(!feof($content)) {
           $line = fgets($content);          
           $datas = explode(' ', $line);
@@ -45,8 +42,7 @@ class ShowOneLog {
                   <td>".$datas[10]."</td>
                 </tr>
               </table>
-          ");
-          echo("<br>");
+          ");          
         }
         fclose($content);
       }
