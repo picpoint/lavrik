@@ -12,8 +12,9 @@ session_start();
 </head>
 <body>
 
-  <section class="wrp">    
-
+  <section class="hmp">    
+    <div class="hmp__wrap">
+    </div>
   </section>  
     
 
