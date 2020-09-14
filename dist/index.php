@@ -19,7 +19,7 @@ session_start();
         <div class="hmp__menu">
           
           <div class="hmp__logo">
-            <img src="pict/logo2.png" alt="logo">
+            <a href="#"><img src="pict/logo2.png" alt="logo"></a>            
           </div>
           <div class="hmp__list">
             <a href="#">Все статьи</a>
@@ -28,7 +28,7 @@ session_start();
             <a href="#">Категории</a>
           </div>
           <div class="hmp__regauth">
-            <a href="#">Регистрация</a>
+            <a href="registration.php">Регистрация</a>
             <a href="#">Авторизация</a>
           </div>
 
