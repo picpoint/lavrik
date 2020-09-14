@@ -17,12 +17,21 @@ session_start();
 
       <div class="hmp__hdr">
         <div class="hmp__menu">
-          <div class="hmp__logo">
           
+          <div class="hmp__logo">
+            <img src="pict/logo2.png" alt="logo">
           </div>
           <div class="hmp__list">
-          
+            <a href="#">Все статьи</a>
+            <a href="#">Категории</a>
+            <a href="#">О нас</a>
+            <a href="#">Категории</a>
           </div>
+          <div class="hmp__regauth">
+            <a href="#">Регистрация</a>
+            <a href="#">Авторизация</a>
+          </div>
+
         </div>        
       </div>
 

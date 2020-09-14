@@ -42,7 +42,46 @@
     }
     &__logo {
       border: @border;
-      width: 100px;
+      display: flex;
+      justify-content: center;
+      width: 10%;
+        img {
+          height: 100%;
+        }
+    }
+    &__list {
+      border: @border;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 70%;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+    }
+    &__regauth {
+      border: @border;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 20%;
+        a {
+          border: @border;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          text-decoration: none;
+          height: 50%;
+          // width: 100%;
+          transition: @transition;
+          &:hover {
+            font-weight: bolder;
+            font-size: 1.1rem;
+            transition: @transition;
+          }
+        }
     }
 
 
