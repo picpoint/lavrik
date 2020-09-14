@@ -13,8 +13,22 @@ session_start();
 <body>
 
   <section class="hmp">    
-    <div class="hmp__wrap">
+    <div class="hmp__wrp">
+
+      <div class="hmp__hdr">
+        <div class="hmp__menu">
+          <div class="hmp__logo">
+          
+          </div>
+          <div class="hmp__list">
+          
+          </div>
+        </div>        
+      </div>
+
+      <div class="hmp__bdy">
       
+      </div>
     </div>
   </section>  
     
