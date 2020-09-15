@@ -9,6 +9,7 @@
 <body>
 <?php
   require_once "../controller/registrationController.php";
+  require_once "../model/registrationModel.php";
 ?>
   
   <section class="reg">
@@ -18,13 +19,13 @@
       </div>
       <div class="reg__regblock">
         <form method="POST" class="reg__form">
-          <input type="text" name="regname" placeholder="Логин">
+          <input type="text" name="reglogin" placeholder="Логин">
           <input type="password" name="regpass" placeholder="Пароль">
-          <button type="submit">РЕГИСТРАЦИЯ</button>          
+          <button type="submit" name="regbtn">РЕГИСТРАЦИЯ</button>          
         </form>
       </div>
       <?php
-        $res = new Registration();
+        $res = new RegistrationC();
         $res -> getDatasFields();
       ?>
     </div>
