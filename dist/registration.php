@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +14,7 @@
 <?php
   require_once "../controller/registrationController.php";
   require_once "../model/registrationModel.php";
+  require_once "../model/getAllUsersModel.php";
 ?>
   
   <section class="reg">
