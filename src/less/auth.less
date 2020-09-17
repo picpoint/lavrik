@@ -1,0 +1,53 @@
+@import "var.less";
+
+
+
+.auth {
+  // border: @border;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+    &__wrp {
+     border: @border;
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     height: 100%;
+    }    
+    &__headline {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 10%;
+        h3 {
+          font-size: 2rem;
+          font-weight: bolder;
+        }
+    }
+    &__blockform {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90%;
+    }
+    &__authoriz {
+      border: @border;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 70%;
+        input {
+          width: 50%;
+          height: 20px;
+          margin: 10px 0;
+        }
+        button {
+          width: 50px;
+          height: 50px;
+          background-color: lightblue;
+        }
+    }
+}
