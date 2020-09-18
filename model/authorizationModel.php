@@ -10,7 +10,11 @@ class AuthorizationM {
 
 
   public function checkAuthorizUser() {
-    
+    $sth = $this->cnnct -> prepare("SELECT login, password FROM users");
+    $sth -> execute();
+    $datas = $sth -> fetchAll(PDO::FETCH_ASSOC);
+    return $datas;
+
   }
 
 

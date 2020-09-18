@@ -11,8 +11,8 @@ class RegistrationM {
 
    
   public function writeUsersToDB() {
-    $login = $this->arrFields[0];
-    $password = $this->arrFields[1];
+    $login = trim($this->arrFields[0]);
+    $password = trim($this->arrFields[1]);
     $sth = $this->cnnct -> prepare("INSERT INTO users (login, password) VALUE('$login', '$password')");
     $sth -> execute();
   }

@@ -11,7 +11,7 @@
 </head>
 <?php
   require_once "../controller/authorizationController.php";
-
+  require_once "../model/authorizationModel.php";
 ?>
 
 <body>
@@ -23,7 +23,7 @@
       <div class="auth__blockform">
         <form method="POST" class="auth__authoriz">
           <input type="text" name="login">
-          <input type="text" name="password">
+          <input type="password" name="password">
           <button type="submit" name="enteringbtn">Войти</button>
           <?php
             $res = new AuthorizationC();
