@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,10 @@
   <title>Authorization</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+<?php
+  require_once "../controller/authorizationController.php";
+
+?>
 
 <body>
   <section class="auth">
@@ -17,7 +24,11 @@
         <form method="POST" class="auth__authoriz">
           <input type="text" name="login">
           <input type="text" name="password">
-          <button type="submit">Войти</button>
+          <button type="submit" name="enteringbtn">Войти</button>
+          <?php
+            $res = new AuthorizationC();
+            $res -> getDatasFields();
+          ?>
         </form>        
       </div>
     </div>
