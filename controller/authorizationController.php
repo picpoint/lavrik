@@ -6,18 +6,20 @@ class AuthorizationC {
   
   public function getDatasFields() {
     $arrUsr = [];    
+    $arrLogin = [];
+    $arrPassword = [];
     
     if(isset($_POST['enteringbtn'])) {
       if(!empty($_POST['login']) && !empty($_POST['password'])) {
         $login = trim($_POST['login']);
         $password = trim($_POST['password']);
         
-        echo("login - $login");
-        echo("<br>");
-        echo("password - $password");
-        echo("<br>");
-        echo("<br>");
-        echo("<br>");
+        // echo("login - $login");
+        // echo("<br>");
+        // echo("password - $password");
+        // echo("<br>");
+        // echo("<br>");
+        // echo("<br>");
 
         $allUsrs = new AuthorizationM();
         $res = $allUsrs -> checkAuthorizUser();
@@ -25,11 +27,28 @@ class AuthorizationC {
         // print_r($res);
 
         foreach($res as $rs) {
-          if(in_array($login, $rs)) {
-            echo("YES!!!!");
+          foreach($rs as $key => $value) {
+            if($key == 'login') {
+              $arrLogin[] = $value;
+            } else if($key == 'password') {
+              $arrPassword[] = $value;
+            }
+          }
+        }
+
+        $arrLogPass = array_combine($arrLogin, $arrPassword);
+
+        // print_r($arrLogPass);
+
+        foreach($arrLogPass as $key => $value) {
+          echo("$key - $value");
+          echo("<br>");
+          if($login == $key) {
+            echo("YES");
             echo("<br>");
           } else {
-            echo("no ...");
+            echo("no...");
+            echo("<br>");
           }
         }
       
