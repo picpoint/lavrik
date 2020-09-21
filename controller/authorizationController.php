@@ -9,7 +9,7 @@ class AuthorizationC {
     
     if(isset($_POST['enteringbtn'])) {
       if(!empty($_POST['login']) && !empty($_POST['password'])) {
-        $login = $_POST['login'];
+        $login = trim($_POST['login']);
         $password = trim($_POST['password']);
         
         echo("login - $login");
@@ -19,32 +19,27 @@ class AuthorizationC {
         echo("<br>");
         echo("<br>");
 
+        $allUsrs = new AuthorizationM();
+        $res = $allUsrs -> checkAuthorizUser();
 
-        $allUsers = new AuthorizationM();
-        $allUsersData = $allUsers -> checkAuthorizUser();
+        // print_r($res);
 
-        // print_r($allUsersData);
-
-        foreach($allUsersData as $usrs) {
-          foreach($usrs as $key => $value) {
-            echo("$key - $value");
+        foreach($res as $rs) {
+          if(in_array($login, $rs)) {
+            echo("YES!!!!");
             echo("<br>");
-            
-            if($login == $key) {
-              echo("******************ЛОГИН ВЕРНЫЙ****************");
-              echo("<br>");
-            } else {
-              echo(".........логин не верный .......");
-              echo("<br>");
-            }
-
+          } else {
+            echo("no ...");
           }
         }
+      
+      } else {
+        echo("Поля не заполнены....");
+      }
 
-
-
-      }      
     }
+
+    
 
   }  
 
