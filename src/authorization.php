@@ -22,12 +22,12 @@
       </div>
       <div class="auth__blockform">
         <form method="POST" class="auth__authoriz">
-          <input type="text" name="login">
-          <input type="password" name="password">
+          <input type="text" name="enterlogin">
+          <input type="password" name="enterpassword">
           <button type="submit" name="enteringbtn">Войти</button>
           <?php
-            $res = new AuthorizationC();
-            $res -> getDatasFields();
+            $res = new AuthorizC();
+            $res -> makeAuthoriz();
           ?>
         </form>        
       </div>

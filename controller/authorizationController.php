@@ -2,62 +2,33 @@
 
 
 
-class AuthorizationC {
-  
-  public function getDatasFields() {
-    $arrUsr = [];    
-    $arrLogin = [];
-    $arrPassword = [];
-    
-    if(isset($_POST['enteringbtn'])) {
-      if(!empty($_POST['login']) && !empty($_POST['password'])) {
-        $login = trim($_POST['login']);
-        $password = trim($_POST['password']);
-        
-        $allUsrs = new AuthorizationM();
-        $res = $allUsrs -> checkAuthorizUser();
+class AuthorizC {
 
-        foreach($res as $rs) {
-          foreach($rs as $key => $value) {
-            if($key == 'login') {
-              $arrLogin[] = $value;
-            } else if($key == 'password') {
-              $arrPassword[] = $value;
-            }
-          }
+
+  public function makeAuthoriz() {
+    if(isset($_POST['enteringbtn']) && !empty($_POST['enterlogin']) && !empty($_POST['enterpassword'])) {
+      $enterlogin = trim($_POST['enterlogin']);
+      $enterpassword = trim($_POST['enterpassword']);
+
+      echo($enterlogin);
+      echo("<br>");
+      echo($enterpassword);
+
+      $usrsFromDB = new GetAllUsersM();
+      $res = $usrsFromDB -> getAllUsrs();
+
+      foreach($res as $rs) {
+        if(in_array($enterlogin, $rs)) {
+          echo("YES!!!!!!!!!!!!!!!");
+        } else {
+          echo('no ....');
         }
-
-        $arrLogPass = array_combine($arrLogin, $arrPassword);
-
-        // print_r($arrLogPass);
-
-        foreach($arrLogPass as $key => $value) {
-          echo("<br>");
-          echo("$key - $value");
-          echo("<br>");
-          echo("PASS - $password");
-          echo("<br>");          
-
-          if($login == $key && $password == password_verify($password, $value)) {
-            echo("!!!!!!!!YES USER!!!!!!!!!");
-            echo("<br>");
-          } else {
-            echo("no....");
-            echo("<br>");
-          }
-
-        }
-
-              
-      } else {
-        echo("Поля не заполнены....");
       }
 
+    } else {
+      echo("Поля не заполнены");
     }
-
-    
-
-  }  
+  }
 
 
 
