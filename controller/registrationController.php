@@ -25,7 +25,7 @@ class RegistrationC {
           echo("Такой пользователь уже зарегистрирован");
         } else {
           $login = trim($_POST['reglogin']);
-          $password = trim($_POST['regpass']);
+          $password = $_POST['regpass'];
 
           $arrFields[] = $login;
           $arrFields[] = password_hash($password, PASSWORD_DEFAULT);

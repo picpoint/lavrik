@@ -14,17 +14,8 @@ class AuthorizationC {
         $login = trim($_POST['login']);
         $password = trim($_POST['password']);
         
-        // echo("login - $login");
-        // echo("<br>");
-        // echo("password - $password");
-        // echo("<br>");
-        // echo("<br>");
-        // echo("<br>");
-
         $allUsrs = new AuthorizationM();
         $res = $allUsrs -> checkAuthorizUser();
-
-        // print_r($res);
 
         foreach($res as $rs) {
           foreach($rs as $key => $value) {
@@ -41,17 +32,23 @@ class AuthorizationC {
         // print_r($arrLogPass);
 
         foreach($arrLogPass as $key => $value) {
+          echo("<br>");
           echo("$key - $value");
           echo("<br>");
-          if($login == $key) {
-            echo("YES");
+          echo("PASS - $password");
+          echo("<br>");          
+
+          if($login == $key && $password == password_verify($password, $value)) {
+            echo("!!!!!!!!YES USER!!!!!!!!!");
             echo("<br>");
           } else {
-            echo("no...");
+            echo("no....");
             echo("<br>");
           }
+
         }
-      
+
+              
       } else {
         echo("Поля не заполнены....");
       }
