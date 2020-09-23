@@ -9,6 +9,10 @@
   <title>Authorization</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+<?php
+  require_once "../controller/authController.php";
+  require_once "../model/returnRecordsModel.php";
+?>
 
 
 <body>
@@ -21,7 +25,11 @@
         <form method="POST" class="auth__authoriz">
           <input type="text" name="enterlogin">
           <input type="password" name="enterpassword">
-          <button type="submit" name="enteringbtn">Войти</button>          
+          <button type="submit" name="enteringbtn">Войти</button>
+          <?php
+            $resAuth = new AuthorizationC();
+            $resAuth -> authUser();
+          ?>
         </form>        
       </div>
     </div>

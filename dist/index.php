@@ -29,7 +29,7 @@ session_start();
           </div>
           <div class="hmp__regauth">
             <a href="reg.php">Регистрация</a>
-            <a href="#">Авторизация</a>
+            <a href="auth.php">Авторизация</a>
           </div>
 
         </div>        
