@@ -9,10 +9,7 @@
   <title>Authorization</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<?php
-  require_once "../controller/authorizationController.php";
-  require_once "../model/authorizationModel.php";
-?>
+
 
 <body>
   <section class="auth">
@@ -24,11 +21,7 @@
         <form method="POST" class="auth__authoriz">
           <input type="text" name="enterlogin">
           <input type="password" name="enterpassword">
-          <button type="submit" name="enteringbtn">Войти</button>
-          <?php
-            $res = new AuthorizC();
-            $res -> makeAuthoriz();
-          ?>
+          <button type="submit" name="enteringbtn">Войти</button>          
         </form>        
       </div>
     </div>

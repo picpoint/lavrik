@@ -26,12 +26,6 @@ PHP. Базовый курс – ДЗ№3.
 
 
 
-dendaz
-123456
-
-Girken
-000QWERTG
-
-shimerT
-SDGGH#@255
+gontik
+123745
 

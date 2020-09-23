@@ -28,8 +28,8 @@ session_start();
             <a href="#">Категории</a>
           </div>
           <div class="hmp__regauth">
-            <a href="registration.php">Регистрация</a>
-            <a href="authorization.php">Авторизация</a>
+            <a href="reg.php">Регистрация</a>
+            <a href="#">Авторизация</a>
           </div>
 
         </div>        

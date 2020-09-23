@@ -12,10 +12,10 @@ session_start();
 </head>
 <body>
 <?php
-  require_once "../controller/registrationController.php";
-  require_once "../model/registrationModel.php";
-  require_once "../model/getAllUsersModel.php";
+  require_once "../controller/regController.php";
+  require_once "../model/returnRecordsModel.php";
 ?>
+
   
   <section class="reg">
     <div class="reg__wrp">
@@ -23,16 +23,19 @@ session_start();
         <h3>Регистрация</h3>
       </div>
       <div class="reg__regblock">
+        
         <form method="POST" class="reg__form">
-          <input type="text" name="reglogin" placeholder="Логин">
+          <input type="text" name="reglog" placeholder="Логин">
           <input type="password" name="regpass" placeholder="Пароль">
           <button type="submit" name="regbtn">РЕГИСТРАЦИЯ</button>          
+          <?php
+            $resReg = new RegistrationC();
+            $resReg -> regMethod();
+          ?>
         </form>
+
       </div>
-      <?php
-        $res = new RegistrationC();
-        $res -> getDatasFields();
-      ?>
+      
     </div>
   </section>
 
