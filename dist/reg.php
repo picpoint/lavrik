@@ -14,6 +14,7 @@ session_start();
 <?php
   require_once "../controller/regController.php";
   require_once "../model/returnRecordsModel.php";
+  require_once "../model/regUsersModel.php";
 ?>
 
   
