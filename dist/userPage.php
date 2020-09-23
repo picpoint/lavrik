@@ -18,7 +18,7 @@ session_start();
       <div class="lk__username">
         <span>
           <?php
-            echo($_SESSION['user']);
+            echo($_SESSION['login']);
           ?>
         </span>
       </div>

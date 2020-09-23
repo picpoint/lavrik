@@ -28,6 +28,8 @@ class RegistrationC {
       } else {
         $resultReg = new RegistrationUsersM();
         $resultReg -> regUser($reglog, password_hash($regpass, PASSWORD_DEFAULT));
+        $_SESSION['login'] = $reglog;
+        header('location: userPage.php');
       }
     
     } else {
