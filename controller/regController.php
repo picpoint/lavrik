@@ -17,12 +17,12 @@ class RegistrationC {
       foreach($res as $rs) {
         foreach($rs as $key => $value) {
           if($key == 'login') {
-            $arrAllUsers[] = $value;
+            $arrAllUsers[] = mb_strtolower($value);
           }
         }
       }
 
-      if(in_array($reglog, $arrAllUsers)) {
+      if(in_array(mb_strtolower($reglog), $arrAllUsers)) {
         echo("Такой пользователь уже существует");
         echo("<br>");
       } else {
