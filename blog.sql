@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Сен 21 2020 г., 07:27
+-- Время создания: Сен 24 2020 г., 07:43
 -- Версия сервера: 10.4.11-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `login` varchar(20) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -38,9 +38,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `password`) VALUES
-(38, 'dendaz', '$2y$10$2lng6gLQ9PzpOZuKOz1CZ.9z24GIU3upA.6KoQYp6Eo'),
-(39, 'Girken', '$2y$10$gc7QL7KPvS3mmPKKabAG2ek2m69WTjAfw1VLKeFauZD'),
-(40, 'shimerT', '$2y$10$BKRcmwEoEMPZ0DOfBVQWQuZngdH1zl4sE2mIn3Lrzur');
+(60, 'gontik', '$2y$10$CCuDZdLpBJOWHIrKLd8WVeqC1J8GgvO3ty1VMhuZQzjdc/2PtCiJq'),
+(61, 'shimerT', '$2y$10$yHeEmtoIkwlBOyIgA/qXtOPTZdQ/9Wid0i4K3QpQ2JoDJ7Uirci36'),
+(62, 'goSHA', '$2y$10$w1XGq2cK.wXRnHQVl8tT1ulVs0po4yqBNwrmYqCL01K7JAeTzqQpK'),
+(63, 'den', '$2y$10$x.a6aFbn4FphETr5emZ4bOPvDkLFkfhSIm.rpB3dDs73IlukgxISe');
 
 --
 -- Индексы сохранённых таблиц
@@ -60,7 +61,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

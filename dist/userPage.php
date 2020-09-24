@@ -33,7 +33,11 @@ session_start();
     </div>
     <div class="lk__mainblock">
       <div class="lk__blockform">
-        
+        <form method="POST" class="lk__formpost">
+          <input type="text" name="headpost">
+          <input type="text" name="bodypost">
+          <button type="submit">НАПИСАТЬ ПОСТ</button>
+        </form>
       </div>
     </div>
   </div>
