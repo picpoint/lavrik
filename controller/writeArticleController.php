@@ -4,9 +4,25 @@
 
 class WriteArticleC {
 
+  public function __construct() {
+    date_default_timezone_set('Europe/Moscow');
+  }
+
   public function getDatasFields() {
-    if(isset($_POST['writebtn']) && !empty($_POST['headpost']) ) {
-      echo($_POST['headpost']);
+    $arrDatas = [];
+    if(isset($_POST['writebtn']) && !empty($_POST['headpost']) && !empty($_POST['bodypost'])) {
+      $arrDatas[] = $_POST['headpost'];
+      $arrDatas[] = $_POST['bodypost'];
+      $arrDatas[] = $_SESSION['login'];
+      $arrDatas[] = date('d:m:Y H:i:s');
+      
+      // print_r($arrDatas);
+
+      $res = new WriteArticleM();
+      $res -> writeArticleToDB($arrDatas);
+      
+    } else {
+      echo("Поля не заполнены");
     }
   }
 

@@ -11,8 +11,9 @@ session_start();
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<?
+<?php
   require_once "../controller/writeArticleController.php";
+  require_once "../model/writeArticleModel.php";
 ?>
 
 <section class="lk">
@@ -41,8 +42,8 @@ session_start();
           <textarea name="bodypost" id="bodypost" placeholder="Статья"></textarea>          
           <button type="submit" name="writebtn">НАПИСАТЬ ПОСТ</button>
           <?php
-            $getDatas = new WriteArticleC();
-            $getDatas -> getDatasFields();
+            $resWriteArticle = new WriteArticleC();
+            $resWriteArticle -> getDatasFields();
           ?>
         </form>
       </div>

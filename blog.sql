@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Сен 24 2020 г., 07:43
--- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Сен 24 2020 г., 19:46
+-- Версия сервера: 10.4.14-MariaDB
+-- Версия PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- База данных: `blog`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `articles`
+--
+
+CREATE TABLE `articles` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `headpost` varchar(300) NOT NULL,
+  `bodypost` varchar(3000) NOT NULL,
+  `author` varchar(50) NOT NULL,
+  `date` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `articles`
+--
+
+INSERT INTO `articles` (`id`, `headpost`, `bodypost`, `author`, `date`) VALUES
+(2, 'Какой то заголовок', 'Однажды в студёную зимнюю пору', 'den', '24:09:2020 20:40:12'),
+(3, 'ddddddd', 'ввввввввввв', 'den', '24:09:2020 20:45:27'),
+(4, 'фывфвфвфывфыв', 'фыыыыыыыыыыыыыыыыыыыыссммчаимавиапи', 'den', '24:09:2020 20:46:10');
 
 -- --------------------------------------------------------
 
@@ -48,6 +71,12 @@ INSERT INTO `users` (`id`, `login`, `password`) VALUES
 --
 
 --
+-- Индексы таблицы `articles`
+--
+ALTER TABLE `articles`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -56,6 +85,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `articles`
+--
+ALTER TABLE `articles`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
