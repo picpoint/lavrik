@@ -22,32 +22,22 @@ class AuthorizationC {
             $arrLogs[] = $value;
           } else if($key == 'password') {
             $arrPass[] = $value;
-          }
-          
+          }          
         }       
       }
 
-      $arrCombine = array_combine($arrLogs, $arrPass);
-
-      echo("$pass - $value");
-      echo("<br>");
-      echo("<br>");
-      echo("<br>");
+      
+      $arrCombine = array_combine($arrLogs, $arrPass);    
+      
       
       foreach($arrCombine as $key => $value) {
-        if($log == $key && $pass = password_verify($pass, $value)) {
-          echo("АВТОРИЗ");
-          echo("<br>");
-          echo("$log - $pass");
-        } else {
-          echo("not");
-          echo("<br>");
-          echo("$log - $pass");
-          echo("<br>");
-        }
-
+        if($log == $key && $pass == password_verify($pass, $value)) {
+          $_SESSION['login'] = $log;
+          header("location: userPage.php");
+        } 
       }
 
+      echo("Логин или пароль неправильны");
 
 
     } else {
