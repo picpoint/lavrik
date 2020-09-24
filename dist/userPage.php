@@ -11,6 +11,9 @@ session_start();
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<?
+  require_once "../controller/writeArticleController.php";
+?>
 
 <section class="lk">
   <div class="lk__wrp">
@@ -34,9 +37,13 @@ session_start();
     <div class="lk__mainblock">
       <div class="lk__blockform">
         <form method="POST" class="lk__formpost">
-          <input type="text" name="headpost">
-          <input type="text" name="bodypost">
-          <button type="submit">НАПИСАТЬ ПОСТ</button>
+          <input type="text" name="headpost" placeholder="Заголовок">
+          <textarea name="bodypost" id="bodypost" placeholder="Статья"></textarea>          
+          <button type="submit" name="writebtn">НАПИСАТЬ ПОСТ</button>
+          <?php
+            $getDatas = new WriteArticleC();
+            $getDatas -> getDatasFields();
+          ?>
         </form>
       </div>
     </div>
