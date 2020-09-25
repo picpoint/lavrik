@@ -14,9 +14,7 @@ class WriteArticleC {
       $arrDatas[] = $_POST['headpost'];
       $arrDatas[] = $_POST['bodypost'];
       $arrDatas[] = $_SESSION['login'];
-      $arrDatas[] = date('d:m:Y H:i:s');
-      
-      // print_r($arrDatas);
+      $arrDatas[] = date('d:m:Y H:i:s');      
 
       $res = new WriteArticleM();
       $res -> writeArticleToDB($arrDatas);
