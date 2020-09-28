@@ -14,6 +14,8 @@ session_start();
 <?php
   require_once "../controller/writeArticleController.php";
   require_once "../model/writeArticleModel.php";
+  require_once "../controller/showListsPosts.php";
+  require_once "../model/getAllPostsForAdminModel.php";
 ?>
 
 <section class="lk">
@@ -48,7 +50,10 @@ session_start();
         </form>
       </div>
       <div class="lk__moderblock">
-        
+        <?php
+          $showPosts = new ShowListPostsC();
+          $showPosts -> showList();
+        ?>
       </div>
     </div>
   </div>

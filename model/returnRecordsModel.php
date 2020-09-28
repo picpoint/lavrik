@@ -11,8 +11,8 @@ class ReturnRecordsM {
 
   public function returnRec(string $request):array {
     $sth = $this->cnnct -> prepare($request);
-    $sth -> execute();
-    $data = $sth -> fetchAll(PDO::FETCH_ASSOC);
+    $data = $sth -> execute();
+    $data -> fetchAll(PDO::FETCH_ASSOC);
     return $data;
   } 
 
