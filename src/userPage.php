@@ -15,7 +15,7 @@ session_start();
   require_once "../controller/writeArticleController.php";
   require_once "../model/writeArticleModel.php";
   require_once "../controller/showListsPosts.php";
-  require_once "../model/getAllPostsForAdminModel.php";
+  require_once "../model/getAllPostsForAdminModel.php";  
 ?>
 
 <section class="lk">

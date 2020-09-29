@@ -11,9 +11,8 @@ class GetAllPostsM {
 
   public function getAllPost(string $sqlQuery) : array {
     $sth = $this->cnnct -> prepare($sqlQuery);
-    $data = $sth -> execute();
-    $data -> fetchAll(PDO::FETCH_ASSOC);
-    return $data;
+    $sth -> execute();
+    return $sth -> fetchAll(PDO::FETCH_ASSOC);    
   }
 
 
