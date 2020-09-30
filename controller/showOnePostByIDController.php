@@ -8,7 +8,7 @@ class ShowOnePostByIdC {
     $idPost = $_GET['id'];
 
     $res = new GetAllPostsM();
-    $onePosts = $res -> getAllPost("SELECT headpost, bodypost FROM articles WHERE $idPost = id");
+    $onePosts = $res -> getAllPost("SELECT headpost, bodypost, date FROM articles WHERE $idPost = id");
       
     foreach($onePosts as $pst) {
       foreach($pst as $key => $value) {                
@@ -18,6 +18,10 @@ class ShowOnePostByIdC {
           echo("</div>");
         } else if($key == 'bodypost') {
           echo("<div class=" . " mp__bdpost" . ">");
+            echo("<span>$value</span>");
+          echo("</div>");
+        } else if($key == 'date') {
+          echo("<div class=" . " mp__dtpost" . ">");
             echo("<span>$value</span>");
           echo("</div>");
         }
