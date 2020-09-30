@@ -10,6 +10,8 @@
 <?php
   require_once "../controller/showOnePostByIDController.php";
   require_once "../model/getAllPostsForAdminModel.php";
+  require_once "../controller/editOnePostController.php";
+  require_once "../model/makeRequestForOnePostModel.php";
 ?>
 
 
@@ -22,8 +24,16 @@
         ?>
       </div>
       <div class="mp__operations">
-      
-      </div>
+        <form method="post">
+          <button type="submit" name="delbtn">Удалить</button>
+          <button type="submit" name="aprbtn">Допустить к публикации</button>
+        </form>
+        <?php
+          $editPst = new EditOnePostC();
+          $editPst -> delOnePost();
+          $editPst -> publishPost();
+        ?>
+      </div>      
     </div>
   </section>
  
