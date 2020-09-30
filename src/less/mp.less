@@ -1,0 +1,29 @@
+@import "var.less";
+
+body {
+  box-sizing: border-box;
+}
+
+.mp {
+  border: @border;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+    &__wrp {
+      border: @border;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+    &__posts {
+      border: @border;
+      height: 80%;
+    }
+    &__operations {
+      border: @border;
+      height: 20%;
+      // background-color: lightblue;
+    }
+    
+}
