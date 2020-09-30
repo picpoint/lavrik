@@ -9,13 +9,17 @@
 <body>
 <?php
   require_once "../controller/showOnePostByIDController.php";
+  require_once "../model/getAllPostsForAdminModel.php";
 ?>
 
 
   <section class="mp">
     <div class="mp__wrp">
       <div class="mp__posts">
-      
+        <?php
+          $showPost = new ShowOnePostByIdC();
+          $showPost -> showOnePost();
+        ?>
       </div>
       <div class="mp__operations">
       

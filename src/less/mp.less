@@ -18,12 +18,37 @@ body {
     }
     &__posts {
       border: @border;
+      display: flex;
+      flex-direction: column;
       height: 80%;
     }
+    &__hdrpost {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 20%;
+        span {
+          font-size: 1.2rem;                    
+        }
+    }
+    &__bdpost {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 80%;
+        span {
+          font-size: 1.1rem;          
+          width: 80%;
+        }
+    }
+
+
+
     &__operations {
       border: @border;
-      height: 20%;
-      // background-color: lightblue;
+      height: 20%;      
     }
     
 }
