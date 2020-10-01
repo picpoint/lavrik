@@ -43,6 +43,25 @@ session_start();
           <input type="text" name="headpost" placeholder="Заголовок">
           <textarea name="bodypost" id="bodypost" placeholder="Статья"></textarea>          
           <button type="submit" name="writebtn">НАПИСАТЬ ПОСТ</button>
+          <div class="lk__cattags">
+            <div class="lk__category">
+              <select name="categories" id="ctg">
+                <option value="cosm">Космос</option>
+                <option value="comp">Компьютеры</option>
+                <option value="food">Еда</option>
+                <option value="sport">Спорт</option>
+                <option value="science">Наука</option>
+              </select>
+            </div>
+            
+            <div class="lk__tags">
+              <label for="news" class="lk__lbl">
+                <input type="checkbox" name="ckb" value="новости" id="news">
+                Новостное
+              </label>
+
+            </div>
+          </div>
           <?php
             $resWriteArticle = new WriteArticleC();
             $resWriteArticle -> getDatasFields();

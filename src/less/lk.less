@@ -59,9 +59,9 @@
       border: @border;
       display: flex;
       justify-content: center;
-      align-items: center;
+      // align-items: center;
       width: 50%;
-      height: 70%;     
+      height: 80%;     
     }
     &__formpost {
       border: @border;
@@ -69,7 +69,7 @@
       flex-direction: column;
       align-items: center;
       width: 80%;
-      height: 80%;
+      height: 100%;
         input {
           height: 30px;
           width: 80%;
@@ -93,6 +93,41 @@
           cursor: pointer;
         }
     }
+    &__cattags {
+      border: @border;
+      display: flex;
+      width: 100%;
+      height: 30%;
+    }
+    &__category {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+        select {
+          width: 85%;
+          height: 20%;
+        }
+    }
+    &__tags {
+      border: @border;
+      display: flex;
+      width: 50%;
+      height: 100%;
+    }
+    &__lbl {
+      border: @border;
+      display: flex;
+      input {
+        // border: @border;
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+
     
     &__moderblock {
       border: @border;
@@ -101,7 +136,7 @@
       align-items: center;
       flex-wrap: wrap;
       width: 100%;
-      height: 30%;
+      height: 20%;
         a {
           margin: 10px;
           background-color: lightgray;
