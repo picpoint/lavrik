@@ -2,20 +2,20 @@
 
 
 
-class ShowListPostsC {
+class ShowListPostsC {                                                                  // контроллер показа постов
   
-  public function showList() {
-    if($_SESSION['login'] == 'admin') {
-      $result = new GetAllPostsM();
-      $res = $result -> getAllPost("SELECT id, headpost, bodypost FROM articles WHERE moderation = 0");
+  public function showList() {                                                          // метод показа
+    if($_SESSION['login'] == 'admin') {                                                 // если это админ
+      $result = new GetAllPostsM();                                                     // вызываем метод который возвращает все посты
+      $res = $result -> getAllPost("SELECT id, headpost, bodypost FROM articles WHERE moderation = 0"); // передаём запрос в модель
       
-      foreach($res as $rs) {
+      foreach($res as $rs) {                                                            // пребираем результат
         foreach($rs as $key => $value) {
-          if($key == 'id') {
-            $_GET['id'] = $value;          
+          if($key == 'id') {                                                            // если ключ это поле id 
+            $_GET['id'] = $value;                                                       // в GET присваиваем id
           }
-          if($key == 'headpost') {
-            echo("<a href=" . "../view/moderPost.php?id=$_GET[id]" . ">$value</a>");
+          if($key == 'headpost') {                                                      // если ключ это заголовок поста
+            echo("<a href=" . "../view/moderPost.php?id=$_GET[id]" . ">$value</a>");    // выводим ссылками заголовки поста и в самой ссылке есть адрес перехода ?id=$_GET[id]
           }
         }
       }
