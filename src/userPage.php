@@ -55,9 +55,29 @@ session_start();
             </div>
             
             <div class="lk__tags">
-              <label for="news" class="lk__lbl">
-                <input type="checkbox" name="ckb" value="новости" id="news">
-                Новостное
+              <label for="news" class="lk__lblnews">
+                <input type="checkbox" name="ckb" id="news">
+                <span>Новое</span>
+              </label>
+
+              <label for="bty" class="lk__lblbeauty">
+                <input type="checkbox" name="bty" id="bty">
+                <span>Красота</span>
+              </label>
+
+              <label for="disc" class="lk__lbldisc">
+                <input type="checkbox" name="disc" id="disc">
+                <span>Скидки</span>
+              </label>
+              
+              <label for="buy" class="lk__lblbuy">
+                <input type="checkbox" name="buy" id="buy">
+                <span>Покупки</span>
+              </label>
+              
+              <label for="othr" class="lk__lblothr">
+                <input type="checkbox" name="othr" id="othr">
+                <span>Другое</span>
               </label>
 
             </div>

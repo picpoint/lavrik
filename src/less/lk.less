@@ -1,5 +1,27 @@
 @import "var.less";
 
+//------------------------------------
+//MIXINS
+
+.mixinlbl {
+  border: @border;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  input {
+    border: @border;
+    width: 15px;
+    height: 15px;
+  }
+  span {
+    border: @border;
+  }
+  
+}
+//------------------------------------
+
 
 .lk {
   display: flex;
@@ -60,7 +82,7 @@
       display: flex;
       justify-content: center;
       // align-items: center;
-      width: 50%;
+      width: 85%;
       height: 80%;     
     }
     &__formpost {
@@ -114,17 +136,26 @@
     &__tags {
       border: @border;
       display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
       width: 50%;
       height: 100%;
     }
-    &__lbl {
-      border: @border;
-      display: flex;
-      input {
-        // border: @border;
-        width: 15px;
-        height: 15px;
-      }
+    &__lblnews {
+      .mixinlbl();      
+    }
+    &__lblbeauty {
+      .mixinlbl();
+    }
+    &__lbldisc {
+      .mixinlbl();
+    }
+    &__lblbuy {
+      .mixinlbl();
+    }
+    &__lblothr {
+      .mixinlbl();
     }
 
 
