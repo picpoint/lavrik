@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Сен 28 2020 г., 07:48
+-- Время создания: Окт 06 2020 г., 07:32
 -- Версия сервера: 10.4.11-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `articles` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id_articles` bigint(20) UNSIGNED NOT NULL,
   `headpost` varchar(300) NOT NULL,
   `bodypost` varchar(3000) NOT NULL,
-  `author` varchar(50) NOT NULL,
+  `id_user` varchar(50) NOT NULL,
   `date` varchar(30) NOT NULL,
   `moderation` varchar(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,7 +40,7 @@ CREATE TABLE `articles` (
 -- Дамп данных таблицы `articles`
 --
 
-INSERT INTO `articles` (`id`, `headpost`, `bodypost`, `author`, `date`, `moderation`) VALUES
+INSERT INTO `articles` (`id_articles`, `headpost`, `bodypost`, `id_user`, `date`, `moderation`) VALUES
 (5, ' 35-летнего путешествия Вояджера могло и не быть', 'Зонд \"Вояджер-1\" уже давно несётся по направлению к межзвёздному пространству, но этот самый далеко запущенный человечеством искусственный объект Солнечной системы едва не застрял на земной орбите после своего запуска, состоявшегося в 1977 г.\r\n\r\nУ ракеты \"Титан-Центавр\", на которой был отправлен \"Вояджер-1\", во время подъёма космического аппарата 5 сентября 1977 г. почти полностью закончилось горючее, и оставшихся запасов должно было хватить лишь на 3,5 секунды, сообщили должностные лица миссии на праздновании 35-й годовщины запуска, проходившем в Лаборатории реактивного движения НАСА в Пасадене, Калифорния.\r\n\r\n\"\"Вояджер-1\" едва не остался на орбите, - сказал Чарли Колхейз (Charley Kohlhase), бывший менеджер диспетчерского отдела миссии. - Мы сейчас тут с вами празднуем 35-летие \"Вояджера\", но экспедиция была на волоске от провала\".', 'den', '24:09:2020 22:32:33', '0'),
 (6, ' Чёрные дыры', 'Чёрные дыры - это гигантские космические монстры, экзотические объекты, чья гравитация настолько сильна, что ничто, даже свет, не может вырваться из их когтей.\r\n\r\nЧёрные дыры поражают воображение огромным разнообразием форм, от небольших тел звёздных размеров до сверхмассивных чудовищ, которые прячутся в сердцах галактик. Здесь перечислены несколько чёрных дыр-рекордсменов: самая маленькая, невероятно огромные, а также чёрные дыры, способные пожирать не только окружающую их материю, но и целиком проглатывать себе подобных.\r\n\r\nСамые большие чёрные дыры\r\n\r\nСчитается, что в центрах почти всех галактик лежат сверхмассивные чёрные дыры с массами от нескольких миллионов до нескольких миллиардов солнечных масс. Недавно учёные открыли две самые большие известные на настоящий момент чёрные дыры в двух близлежащих галактиках.', 'den', '24:09:2020 22:35:10', '0'),
 (7, ' Термоядерные двигатели на антиматерии', 'Новости космоса становятся всё жарче: НАСА собирается использовать антиматерию в космических кораблях будущего.\r\n\r\nРеакции слияния ядер, инициированные пучками частиц антиматерии, могут начать приводить в движение сверхвысокоскоростные космические корабли, отправляемые в длительные путешествия, уже к середине этого века, говорят исследователи.\r\n\r\nКорабли с термоядерными двигателями смогут добраться до Юпитера за 4 месяца, открывая таким образом путь к внешней Солнечной системе человеческим экспедициям, согласно отчёту НАСА за 2010 г.\r\n\r\nЧтобы сделать эту технологию доступной, учёным придётся преодолеть немало препятствий - в частности связанных с получением и хранением антиматерии, - но некоторые эксперты полагают, что она может быть готова уже к середине столетия.\r\n\r\nСила ядерного синтеза потрясает воображение', 'gontik', '24:09:2020 22:36:10', '0'),
@@ -56,7 +56,7 @@ INSERT INTO `articles` (`id`, `headpost`, `bodypost`, `author`, `date`, `moderat
 --
 
 CREATE TABLE `users` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id_user` bigint(20) UNSIGNED NOT NULL,
   `login` varchar(20) NOT NULL,
   `password` varchar(100) NOT NULL,
   `role` varchar(3) NOT NULL
@@ -66,7 +66,7 @@ CREATE TABLE `users` (
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `login`, `password`, `role`) VALUES
+INSERT INTO `users` (`id_user`, `login`, `password`, `role`) VALUES
 (60, 'gontik', '$2y$10$CCuDZdLpBJOWHIrKLd8WVeqC1J8GgvO3ty1VMhuZQzjdc/2PtCiJq', '1'),
 (61, 'shimerT', '$2y$10$yHeEmtoIkwlBOyIgA/qXtOPTZdQ/9Wid0i4K3QpQ2JoDJ7Uirci36', '1'),
 (62, 'goSHA', '$2y$10$w1XGq2cK.wXRnHQVl8tT1ulVs0po4yqBNwrmYqCL01K7JAeTzqQpK', '1'),
@@ -81,13 +81,13 @@ INSERT INTO `users` (`id`, `login`, `password`, `role`) VALUES
 -- Индексы таблицы `articles`
 --
 ALTER TABLE `articles`
-  ADD UNIQUE KEY `id` (`id`);
+  ADD PRIMARY KEY (`id_articles`) USING BTREE;
 
 --
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
-  ADD UNIQUE KEY `id` (`id`);
+  ADD PRIMARY KEY (`id_user`) USING BTREE;
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
@@ -97,13 +97,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_articles` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
