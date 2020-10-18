@@ -16,7 +16,7 @@ class WriteArticleM {                                                           
     $author = $mass[2];
     $date = $mass[3];
     
-    $sth = $this->cnnct -> prepare("INSERT INTO articles (headpost, bodypost, author, date, moderation) VALUES('$title', '$content', '$author', '$date', '$this->moderation')"); // подготавливаем запрос
+    $sth = $this->cnnct -> prepare("INSERT INTO articles (headpost, bodypost, id_user, date, moderation) VALUES('$title', '$content', '$author', '$date', '$this->moderation')"); // подготавливаем запрос
     $sth -> execute();                                                             // выполняем запрос
   }
 
