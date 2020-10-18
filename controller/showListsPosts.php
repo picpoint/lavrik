@@ -7,11 +7,11 @@ class ShowListPostsC {                                                          
   public function showList() {                                                          // метод показа
     if($_SESSION['login'] == 'admin') {                                                 // если это админ
       $result = new GetAllPostsM();                                                     // вызываем метод который возвращает все посты
-      $res = $result -> getAllPost("SELECT id, headpost, bodypost FROM articles WHERE moderation = 0"); // передаём запрос в модель
+      $res = $result -> getAllPost("SELECT id_articles, headpost, bodypost FROM articles WHERE moderation = 0"); // передаём запрос в модель
       
       foreach($res as $rs) {                                                            // пребираем результат
         foreach($rs as $key => $value) {
-          if($key == 'id') {                                                            // если ключ это поле id 
+          if($key == 'id_articles') {                                                            // если ключ это поле id 
             $_GET['id'] = $value;                                                       // в GET присваиваем id
           }
           if($key == 'headpost') {                                                      // если ключ это заголовок поста
@@ -24,11 +24,11 @@ class ShowListPostsC {                                                          
     } else if ($_SESSION['login'] != 'admin') {                                         // иначе если это не админ
 
       $result = new GetAllPostsM();                                                     // вызываем метод который возвращает все посты
-      $res = $result -> getAllPost("SELECT id, headpost, bodypost FROM articles WHERE moderation = 1"); // передаём запрос в модель, которая возвращает только отмодерированные посты
+      $res = $result -> getAllPost("SELECT id_articles, headpost, bodypost FROM articles WHERE moderation = 1"); // передаём запрос в модель, которая возвращает только отмодерированные посты
       
       foreach($res as $rs) {                                                            // пребираем результат
         foreach($rs as $key => $value) {
-          if($key == 'id') {                                                            // если ключ это поле id 
+          if($key == 'id_articles') {                                                            // если ключ это поле id 
             $_GET['id'] = $value;                                                       // в GET присваиваем id
           }
           if($key == 'headpost') {                                                      // если ключ это заголовок поста

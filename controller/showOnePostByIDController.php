@@ -8,7 +8,7 @@ class ShowOnePostByIdC {                                                        
     $idPost = $_GET['id'];                                                              // $idPost присваиваем id из ГЕТ-запроса
 
     $res = new GetAllPostsM();                                                          // вызываем модель которая выводит посты
-    $onePosts = $res -> getAllPost("SELECT headpost, bodypost, date FROM articles WHERE $idPost = id"); // делаем запрос полей по нужному id
+    $onePosts = $res -> getAllPost("SELECT headpost, bodypost, date FROM articles WHERE $idPost = id_articles"); // делаем запрос полей по нужному id
       
     foreach($onePosts as $pst) {                                                        // перебираем полученный результат
       foreach($pst as $key => $value) {

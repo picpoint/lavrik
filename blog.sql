@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 06 2020 г., 07:32
--- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.5
+-- Время создания: Окт 18 2020 г., 20:13
+-- Версия сервера: 10.4.14-MariaDB
+-- Версия PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -81,13 +81,15 @@ INSERT INTO `users` (`id_user`, `login`, `password`, `role`) VALUES
 -- Индексы таблицы `articles`
 --
 ALTER TABLE `articles`
-  ADD PRIMARY KEY (`id_articles`) USING BTREE;
+  ADD PRIMARY KEY (`id_articles`) USING BTREE,
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`) USING BTREE;
+  ADD PRIMARY KEY (`id_user`) USING BTREE,
+  ADD UNIQUE KEY `login` (`login`);
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
@@ -104,6 +106,16 @@ ALTER TABLE `articles`
 --
 ALTER TABLE `users`
   MODIFY `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
+-- Ограничения внешнего ключа таблицы `articles`
+--
+ALTER TABLE `articles`
+  ADD CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`login`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
