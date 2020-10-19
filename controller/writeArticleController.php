@@ -16,8 +16,14 @@ class WriteArticleC {                                                           
       $arrDatas[] = $_SESSION['login'];
       $arrDatas[] = date('d:m:Y H:i:s');      
 
-      $res = new WriteArticleM();                                                         // вызываем модель для записи данных в БД и передаём туда массив данных
-      $res -> writeArticleToDB($arrDatas);
+      echo($_POST['headpost']);
+      echo("<br>");
+      echo($_POST['bodypost']);
+      echo("<br>");
+      echo($_POST['ctg']);
+
+      // $res = new WriteArticleM();                                                         // вызываем модель для записи данных в БД и передаём туда массив данных
+      // $res -> writeArticleToDB($arrDatas);
       
     } else {
       echo("Поля не заполнены");                                                          // иначе поля не заполнены
