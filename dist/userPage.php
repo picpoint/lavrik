@@ -44,10 +44,11 @@ session_start();
           <textarea name="bodypost" id="bodypost" placeholder="Статья"></textarea>          
           <button type="submit" name="writebtn">НАПИСАТЬ ПОСТ</button>
           <div class="lk__cattags">
+            
             <div class="lk__category">
               <select name="categories" id="ctg">
-                <option value="cosm">Космос</option>
-                <option value="comp">Компьютеры</option>
+                <option value="space">Космос</option>
+                <option value="computers">Компьютеры</option>
                 <option value="food">Еда</option>
                 <option value="sport">Спорт</option>
                 <option value="science">Наука</option>
