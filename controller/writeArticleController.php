@@ -16,10 +16,18 @@ class WriteArticleC {                                                           
       $arrDatas[] = $_SESSION['login'];
       $arrDatas[] = date('d:m:Y H:i:s');
       $arrDatas[] = $_POST['categories'];
+      
       echo($_POST['news']);
       echo("<br>");
       echo($_POST['bty']);
       echo("<br>");
+      echo($_POST['disc']);
+      echo("<br>");
+      echo($_POST['buy']);
+      echo("<br>");
+      echo($_POST['othr']);
+      echo("<br>");
+
 
       // $res = new WriteArticleM();                                                         // вызываем модель для записи данных в БД и передаём туда массив данных
       // $res -> writeArticleToDB($arrDatas);
