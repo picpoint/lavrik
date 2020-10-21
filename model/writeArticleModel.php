@@ -17,8 +17,13 @@ class WriteArticleM {                                                           
     $date = $mass[3];
     $category = $mass[4];
     $tags = $mass[5];
+    $tgs = '';                                                                    // назначаем переменной пустую строку для того чтоб поместить туда значения тегов и всё сделать строкой
+
+    foreach($tags as $key => $value) {                                            // перебираем массив тегов и всё сливаем в строку
+      $tgs =  $tgs . ' ' . $value . ' ';
+    }
     
-    $sth = $this->cnnct -> prepare("INSERT INTO articles (headpost, bodypost, id_user, date, id_category, tags, moderation) VALUES('$title', '$content', '$author', '$date', '$category', '$tags', '$this->moderation')"); // подготавливаем запрос
+    $sth = $this->cnnct -> prepare("INSERT INTO articles (headpost, bodypost, id_user, date, id_category, tags, moderation) VALUES('$title', '$content', '$author', '$date', '$category', '$tgs', '$this->moderation')"); // подготавливаем запрос
     $sth -> execute();                                                             // выполняем запрос
   }
 

@@ -17,12 +17,8 @@ class WriteArticleC {                                                           
       $arrDatas[] = date('d:m:Y H:i:s');
       $arrDatas[] = $_POST['categories'];
       
-      // print_r($_POST['tags']);
-      // echo("<br>");
-
-      $arrDatas[] = $_POST['tags'];
+      $arrDatas[] = $_POST['tags'];                                                       // в массив помещаем набор тегов
       
-
       $res = new WriteArticleM();                                                         // вызываем модель для записи данных в БД и передаём туда массив данных
       $res -> writeArticleToDB($arrDatas);
       
