@@ -17,20 +17,14 @@ class WriteArticleC {                                                           
       $arrDatas[] = date('d:m:Y H:i:s');
       $arrDatas[] = $_POST['categories'];
       
-      echo($_POST['news']);
-      echo("<br>");
-      echo($_POST['bty']);
-      echo("<br>");
-      echo($_POST['disc']);
-      echo("<br>");
-      echo($_POST['buy']);
-      echo("<br>");
-      echo($_POST['othr']);
-      echo("<br>");
+      // print_r($_POST['tags']);
+      // echo("<br>");
 
+      $arrDatas[] = $_POST['tags'];
+      
 
-      // $res = new WriteArticleM();                                                         // вызываем модель для записи данных в БД и передаём туда массив данных
-      // $res -> writeArticleToDB($arrDatas);
+      $res = new WriteArticleM();                                                         // вызываем модель для записи данных в БД и передаём туда массив данных
+      $res -> writeArticleToDB($arrDatas);
       
     } else {
       echo("Поля не заполнены");                                                          // иначе поля не заполнены
