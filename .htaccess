@@ -1,7 +1,7 @@
 Options -Indexes
 
 
-<FilesMatch "^\.(php)$">
+<FilesMatch "\.(php)$">
   Deny from all
 </FilesMatch>
 

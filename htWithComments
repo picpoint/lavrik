@@ -1,0 +1,15 @@
+RewriteEngine on                      // включает механизм ЧПУ
+RewriteRule                           // команда приводящая url к другому виду
+
+
+Options -Indexes                      // закрывает доступ к папкам
+
+
+<FilesMatch "\.(php)$">              // запрещает доступ к файлам определённого типа
+  Deny from all                      // конкретно запретили доступ ко всем файлам php
+</FilesMatch>
+
+
+<FilesMatch "index.(php)$">              
+  Allow from all                      // разрешили доступ к файлу index.php
+</FilesMatch>
